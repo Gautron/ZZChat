@@ -1,0 +1,23 @@
+<html>
+  <head>
+  <title> Page Perso J.Gautron
+  </title>
+  </head>
+  <body>
+  <h1>Jo</h1>
+  <p>bienvenu chez moi</p>
+<?php
+$dirname = '.';
+$dir = opendir($dirname); 
+
+while($file = readdir($dir)) {
+	if($file != '.' && $file != '..' && !is_dir($dirname.$file))
+	{
+		echo '<a href="'.$file.'" >'.$file.'</a><br />';
+	}
+}
+
+closedir($dir);
+?>  
+  </body>
+</html>

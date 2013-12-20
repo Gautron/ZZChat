@@ -1,0 +1,237 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+
+html{	
+
+	background-image:url("images/ambient.png");
+	background-attachment:fixed; 
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size: cover;
+	
+	
+}
+
+/*----------------------------
+	Ruban
+-----------------------------*/
+
+#fond {
+position: relative;
+margin: 0px auto;
+width: 350px;
+background: #AFAFAF;
+border-radius: 5px;
+box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+z-index: 10;
+height:110px;
+}
+ 
+.ruban {
+background: #89B0F4;
+height: 50px;
+width: 380px;
+position: relative;
+left:-15px;
+top: 30px;
+float: left;
+box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+z-index: 100;
+}
+ 
+.ruban h2 {
+font-size: 25px;
+color: #fff;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+text-align: center;
+margin:10px;
+}
+ 
+.ruban_gauche {
+border-color: transparent #89B0F4 transparent transparent;
+border-style:solid;
+border-width:15px;
+height:0px;
+width:0px;
+position: relative;
+left: -30px;
+top: 65px;
+z-index: -1;  /*s'affichera sous le rectangle  */
+}
+ 
+.ruban_droit {
+border-color: transparent transparent transparent #89B0F4;
+border-style:solid;
+border-width:15px;
+height:0px;
+width:0px;
+position: relative;
+left: 350px;
+top: 35px;
+z-index: -1;
+}
+
+#fr {
+position: absolute;
+left:50px;
+top:0px;
+}
+
+#uk {
+position: absolute;
+top:0px;
+}
+
+/*----------------------------
+	Styling the forms
+-----------------------------*/
+
+#formContainer{
+    width:288px;
+    height:321px;
+    margin:0 auto;
+    position:relative;
+
+    -moz-perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+
+#formContainer form{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:50%;
+    left:0;
+
+    /* Enabling 3d space for the transforms */
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    /* When the forms are flipped, they will be hidden */
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Enabling a smooth animated transition */
+    -moz-transition:0.8s;
+    -webkit-transition:0.8s;
+    transition:0.8s;
+
+    /* Configure a keyframe animation for Firefox */
+    -moz-animation: pulse 2s infinite;
+
+    /* Configure it for Chrome and Safari */
+    -webkit-animation: pulse 2s infinite;
+}
+
+#formlogin{
+    background:url('images/clean_form_bg.jpg') no-repeat;
+    z-index:100;
+}
+
+
+/* Firefox Keyframe Animation */
+@-moz-keyframes pulse{
+	0%{		box-shadow:0 0 1px #008aff;}
+	50%{	box-shadow:0 0 8px #008aff;}
+	100%{	box-shadow:0 0 1px #008aff;}
+}
+
+/* Webkit keyframe animation */
+@-webkit-keyframes pulse{
+	0%{		box-shadow:0 0 1px #008aff;}
+	50%{	box-shadow:0 0 10px #008aff;}
+	100%{	box-shadow:0 0 1px #008aff;}
+}
+
+
+
+/*----------------------------
+	Inputs, Buttons & Links
+-----------------------------*/
+
+
+
+
+
+input[type=text]{
+	/* The text fields */
+	font: 15px 'Segoe UI',Arial,sans-serif;
+	border: none;
+	background:none;
+	height: 36px;
+	left: 26px;
+	position: absolute;
+	top: 176px;
+	width: 234px;
+	text-indent: 8px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	color:#eee;
+	outline:none;
+}
+
+
+#login{
+	top: 197px;
+}
+
+input[type=submit]{
+	
+	/* Submit button */
+	
+	opacity:0.9;
+	position:absolute;
+	top:262px;
+	left:25px;
+	width: 239px;
+	height:36px;
+	cursor:pointer;
+	border-radius:6px;
+	box-shadow:0 1px 1px #888;
+	border:none;
+	color:#fff;
+	font:14px/36px 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+	
+	/* CSS3 Gradients */
+	
+	background-image: linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(80,102,127) 50%, rgb(87,109,136) 50%, rgb(106,129,155) 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.5, rgb(80,102,127)),
+		color-stop(0.5, rgb(87,109,136)),
+		color-stop(1, rgb(106,129,155))
+	);
+}
+
+input[type=submit]:hover{
+	opacity:1;
+}
+
+input::-webkit-input-placeholder {
+    color:#eee;
+}
+
+
+
